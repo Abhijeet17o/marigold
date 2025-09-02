@@ -1,0 +1,19 @@
+<div class="products-container">
+	<h2 class="products-title">Our Gejje Vastramala Collection</h2>
+	<div class="products-grid">
+		<div class="product-card" *ngFor="let product of products">
+			<img [src]="product.image" [alt]="product.name" class="product-img" />
+			<div class="product-info">
+				<h3>{{ product.name }}</h3>
+				<p>{{ product.desc }}</p>
+				<div class="price-section">
+					<span class="price">₹{{ product.price }}</span>
+					<span *ngIf="product.discount" class="discount">{{ product.discount }}% OFF</span>
+				</div>
+				<button class="view-btn" [routerLink]="['/products', product.id]">View Details</button>
+				<button class="cart-btn" (click)="addToCart(product)">Add to Cart</button>
+			</div>
+		</div>
+	</div>
+</div>
+<p>products works!</p>

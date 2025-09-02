@@ -1,0 +1,15 @@
+<div class="product-detail-container">
+	<div class="product-detail-card">
+		<app-carousel [images]="product.images" [alt]="product.name"></app-carousel>
+		<div class="product-detail-info">
+			<h2>{{ product.name }}</h2>
+			<p class="desc">{{ product.desc }}</p>
+			<div class="price-section">
+				<span class="price">₹{{ product.price }}</span>
+				<span class="discount">{{ product.discount }}% OFF</span>
+			</div>
+			<div class="keywords">Keywords: {{ product.keywords }}</div>
+			<button class="cart-btn">Add to Cart</button>
+		</div>
+	</div>
+</div>

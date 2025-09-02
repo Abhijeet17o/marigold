@@ -1,0 +1,42 @@
+<div class="cart-container">
+	<h2>Your Cart</h2>
+	<ng-container *ngIf="cartItems.length; else emptyCart">
+		<table class="cart-table">
+			<thead>
+				<tr>
+					<th>Product</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Subtotal</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of cartItems">
+					<td class="cart-product">
+						<img [src]="item.image" [alt]="item.name" class="cart-img" />
+						<span>{{ item.name }}</span>
+					</td>
+					<td>₹{{ item.price }}</td>
+					<td>
+						<button class="qty-btn" (click)="decrease(item)">-</button>
+						<span class="qty">{{ item.quantity }}</span>
+						<button class="qty-btn" (click)="increase(item)">+</button>
+					</td>
+					<td>₹{{ item.price * item.quantity }}</td>
+					<td><button class="remove-btn" (click)="remove(item)" aria-label="Remove">✕</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="cart-summary">
+			<div class="summary-row">
+				<span>Total:</span>
+				<span class="summary-total">₹{{ total }}</span>
+			</div>
+			<a routerLink="/checkout" class="checkout-btn">Proceed to Checkout</a>
+		</div>
+	</ng-container>
+	<ng-template #emptyCart>
+		<div class="cart-empty">Your cart is empty. <a routerLink="/products">Start shopping!</a></div>
+	</ng-template>
+</div>

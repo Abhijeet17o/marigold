@@ -1,0 +1,33 @@
+<div class="home-container">
+	<header class="brand-header">
+		<img src="assets/logo-marigold.jpeg" alt="Marigold Creative Houses Logo" class="brand-logo" />
+		<h1 class="brand-title">Marigold Creative Houses</h1>
+		<p class="brand-tagline">Handmade Gejje Vastramala for Pooja & Celebrations</p>
+	</header>
+	<section class="hero-section">
+		<h2 class="hero-title">Elevate Your Rituals with Authentic Cotton Malas</h2>
+		<p class="hero-desc">Discover our premium, handmade malas in multiple variants and lengths. Perfect for pooja, gifting, and special occasions.</p>
+		<a routerLink="/products" class="cta-btn">Shop Now</a>
+	</section>
+	<section class="product-highlights">
+		<h3>Featured Variants</h3>
+		<div class="product-cards">
+			<div class="product-card" *ngFor="let product of featuredProducts">
+				<app-carousel [images]="product.images" [alt]="product.name"></app-carousel>
+				<div class="product-info">
+					<h4>{{ product.name }}</h4>
+					<p>{{ product.desc }}</p>
+					<div class="price-section">
+						<span class="price">₹{{ product.price }}</span>
+						<span *ngIf="product.discount" class="discount">{{ product.discount }}% OFF</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="whatsapp-overlay">
+		<a href="https://wa.me/919999999999" target="_blank" aria-label="Chat on WhatsApp">
+			<img src="assets/images/whatsapp-logo.png" alt="WhatsApp" class="whatsapp-logo" />
+		</a>
+	</div>
+</div>

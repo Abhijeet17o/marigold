@@ -1,0 +1,125 @@
+.contact-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+.contact-logo {
+	width: 90px;
+	height: 90px;
+	border-radius: 1.5rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 4px 24px rgba(255, 153, 51, 0.15);
+}
+.contact-title {
+	font-size: 2.1rem;
+	font-weight: 800;
+	color: #ff9800;
+	margin-bottom: 0.3rem;
+	line-height: 1.1;
+}
+.contact-title span {
+	color: #d97706;
+	font-weight: 600;
+}
+.contact-tagline {
+	font-size: 1.1rem;
+	color: #6b7280;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+.contact-container {
+	max-width: 700px;
+	margin: 0 auto 2.5rem auto;
+	background: #fffbe7;
+	border-radius: 1rem;
+	box-shadow: 0 2px 12px rgba(255, 153, 51, 0.10);
+	padding: 2.5rem 1.5rem 2rem 1.5rem;
+}
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	margin-bottom: 2rem;
+}
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+.form-group label {
+	color: #d97706;
+	font-weight: 600;
+	font-size: 1.05rem;
+	margin-bottom: 0.2rem;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+.contact-form input,
+.contact-form textarea {
+	padding: 0.7rem 1rem;
+	border-radius: 0.7rem;
+	border: 1.5px solid #ff9800;
+	font-size: 1rem;
+	background: #fff;
+	transition: border 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+	border: 1.5px solid #d97706;
+	outline: none;
+}
+.send-btn {
+	background: linear-gradient(90deg, #ff9800 60%, #ffb347 100%);
+	color: #fff;
+	border: none;
+	border-radius: 2rem;
+	padding: 0.8rem 2.2rem;
+	font-weight: 700;
+	font-size: 1.1rem;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(255, 153, 51, 0.13);
+	transition: background 0.2s;
+}
+.send-btn:hover {
+	background: linear-gradient(90deg, #d97706 60%, #ff9800 100%);
+}
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	margin-top: 1.5rem;
+}
+.info-block {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	color: #d97706;
+	font-size: 1.1rem;
+}
+.info-icon {
+	font-size: 1.5rem;
+	color: #ff9800;
+}
+.contact-info a {
+	color: #ff9800;
+	text-decoration: underline;
+	font-weight: 600;
+}
+@media (max-width: 700px) {
+	.contact-container {
+		padding: 1.2rem 0.5rem;
+	}
+	.contact-hero {
+		margin-top: 1.2rem;
+	}
+	.contact-title {
+		font-size: 1.2rem;
+	}
+	.contact-logo {
+		width: 50px;
+		height: 50px;
+	}
+}
